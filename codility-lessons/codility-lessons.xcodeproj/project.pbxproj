@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		50A04EB3387CDAC74B3AF55A /* Pods_tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB6963E45E19D583042B70BE /* Pods_tests.framework */; };
 		A01C6B1E1CBBABE800586A11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01C6B1D1CBBABE800586A11 /* AppDelegate.swift */; };
+		A0DEF1DD1CBBCD5B0095D917 /* Lesson1Specs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DEF1DC1CBBCD5B0095D917 /* Lesson1Specs.swift */; };
+		A0DEF1DF1CBBCD6C0095D917 /* Lesson1.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DEF1DE1CBBCD6C0095D917 /* Lesson1.swift */; };
+		A0DEF1E01CBBCD6C0095D917 /* Lesson1.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DEF1DE1CBBCD6C0095D917 /* Lesson1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +31,8 @@
 		A01C6B291CBBABE800586A11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A01C6B331CBBB88300586A11 /* tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A01C6B371CBBB88300586A11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0DEF1DC1CBBCD5B0095D917 /* Lesson1Specs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson1Specs.swift; sourceTree = "<group>"; };
+		A0DEF1DE1CBBCD6C0095D917 /* Lesson1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson1.swift; sourceTree = "<group>"; };
 		AFF7D470065F137FC611370A /* Pods-tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-tests/Pods-tests.release.xcconfig"; sourceTree = "<group>"; };
 		FB6963E45E19D583042B70BE /* Pods_tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -84,6 +89,7 @@
 			children = (
 				A01C6B1D1CBBABE800586A11 /* AppDelegate.swift */,
 				A01C6B291CBBABE800586A11 /* Info.plist */,
+				A0DEF1DE1CBBCD6C0095D917 /* Lesson1.swift */,
 			);
 			path = "codility-lessons";
 			sourceTree = "<group>";
@@ -92,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				A01C6B371CBBB88300586A11 /* Info.plist */,
+				A0DEF1DC1CBBCD5B0095D917 /* Lesson1Specs.swift */,
 			);
 			path = tests;
 			sourceTree = "<group>";
@@ -255,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A01C6B1E1CBBABE800586A11 /* AppDelegate.swift in Sources */,
+				A0DEF1DF1CBBCD6C0095D917 /* Lesson1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +270,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0DEF1DD1CBBCD5B0095D917 /* Lesson1Specs.swift in Sources */,
+				A0DEF1E01CBBCD6C0095D917 /* Lesson1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,11 +398,13 @@
 			baseConfigurationReference = 5E951E87D1A3AB50CB495096 /* Pods-tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mariopavlovic.tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/codility-lessons.app/codility-lessons";
 			};
 			name = Debug;
@@ -402,6 +414,7 @@
 			baseConfigurationReference = AFF7D470065F137FC611370A /* Pods-tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
