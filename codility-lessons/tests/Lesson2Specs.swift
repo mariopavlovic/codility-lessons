@@ -4,14 +4,15 @@ import Nimble
 class Lesson2Specs: QuickSpec {
     override func spec() {
         var sut: Lesson2!
-        let inputArray = [3, 8, 9, 7, 6]
         
         beforeEach { 
             sut = Lesson2()
         }
         
-        describe("Given lesson 2 (A tasks)") {
-            context("when loaded", { 
+        describe("Given lesson 2 (A task)") {
+            let inputArray = [3, 8, 9, 7, 6]
+
+            context("when loaded", {
                 it("should implement solution", closure: {
                     var input = inputArray
                     let result = sut.solutionA(&input, 0)
@@ -76,6 +77,26 @@ class Lesson2Specs: QuickSpec {
                     expect(result).to(equal([3, 1, 2, 3, 1]))
                 })
 
+            })
+        }
+        
+        describe("Given lesson 2 (B task)") {
+            let inputArray = [9, 3, 9, 3, 9, 7, 9]
+
+            context("when loaded", {
+                it("should implement solution", closure: {
+                    var input = inputArray
+                    let result = sut.solutionB(&input)
+                    expect(result).toNot(beNil())
+                })
+            })
+            
+            context("when finding the one without a pair", { 
+                it("should return 7 for test input case", closure: {
+                    var input = inputArray
+                    let result = sut.solutionB(&input)
+                    expect(result).to(equal(7))
+                })
             })
         }
     }

@@ -16,4 +16,27 @@ public class Lesson2 {
         
         return resultArray
     }
+    
+    public func solutionB(inout A : [Int]) -> Int {
+        //count elements
+        var counter = [Int: Int]()
+        A.forEach {
+            if let value = counter[$0] {
+                counter[$0] = value + 1
+            } else {
+                counter[$0] = 1
+            }
+        }
+        
+        //find first with no pair (odd value)
+        var result = -1
+        counter.forEach {
+            if $0.1 % 2 == 1 {
+                result = $0.0
+            }
+        }
+        
+        return result
+    }
+
 }
