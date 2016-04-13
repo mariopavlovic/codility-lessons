@@ -27,4 +27,19 @@ public class Lesson3 {
 
         return min
     }
+    
+    public func solutionC(inout A : [Int]) -> Int {
+        guard A.count > 0 else {
+            return 1
+        }
+        
+        A = A.sort()
+        for (index, item) in A.enumerate() {
+            if index + 1 != item {
+                return index + 1
+            }
+        }
+        
+        return A.count + 1
+    }
 }

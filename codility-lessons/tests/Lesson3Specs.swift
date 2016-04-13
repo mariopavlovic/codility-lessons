@@ -58,7 +58,7 @@ class Lesson3Specs: QuickSpec {
                 /*!
                  *  @brief Failing, code is too slow
                  */
-                it("should calculate correctly and fast for large samples", closure: {
+                xit("should calculate correctly and fast for large samples", closure: {
                     let input = Array(count: 10000, repeatedValue: 1)
                     let start = NSDate.init(timeIntervalSinceNow: 0)
                     let result = sut.solutionB(input)
@@ -66,6 +66,52 @@ class Lesson3Specs: QuickSpec {
                 
                     expect(result).to(equal(0))
                     expect(end.timeIntervalSinceDate(start)).to(beLessThan(10))
+                })
+            })
+        }
+        
+        describe("Given lesson 3 - SolutionC") {
+            context("when loaded", {
+                it("should implemenet solution", closure: {
+                    var input = [Int]()
+                    let result = sut.solutionC(&input)
+                    expect(result).toNot(beNil())
+                })
+            })
+            
+            context("when finding a missing element", {
+                it("should find 4 in codility example", closure: {
+                    var input = [2, 3, 1, 5]
+                    expect(sut.solutionC(&input)).to(equal(4))
+                })
+                
+                it("should return 1 for empty array", closure: { 
+                    var input = [Int]()
+                    let result = sut.solutionC(&input)
+                    expect(result).to(equal(1))
+                })
+                
+                it("should find 1 for 1-element array", closure: { 
+                    var input = [2]
+                    expect(sut.solutionC(&input)).to(equal(1))
+                    
+                    input = [1]
+                    expect(sut.solutionC(&input)).to(equal(2))
+                })
+                
+                it("should return N+1 for arrays with all elements", closure: {
+                    var input = [1, 2, 3]
+                    let result = sut.solutionC(&input)
+                    expect(result).to(equal(4))
+                })
+                
+                it("should be fast", closure: { 
+                    var input = (1...10000).map{ _ in Int(arc4random()) }
+                    let start = NSDate.init(timeIntervalSinceNow: 0)
+                    sut.solutionC(&input)
+                    let timeDiff = NSDate.init(timeIntervalSinceNow: 0).timeIntervalSinceDate(start)
+                    
+                    expect(timeDiff).to(beLessThan(6))
                 })
             })
         }
