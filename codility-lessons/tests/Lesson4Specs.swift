@@ -9,7 +9,7 @@ class Lesson4Specs: QuickSpec {
             sut = Lesson4()
         }
         
-        describe("Given lesson 4 - SolutionA") {
+        describe("Given lesson 4 - secondInWhichFrogCanCross") {
             context("when loaded", {
                 it("should implemenet solution", closure: {
                     expect(sut.secondInWhichFrogCanCross(1, [1])).toNot(beNil())
@@ -37,6 +37,46 @@ class Lesson4Specs: QuickSpec {
                     
                     let result2 = sut.secondInWhichFrogCanCross(5, [1])
                     expect(result2).to(equal(-1))
+                })
+            })
+        }
+        
+        describe("Given lesson 4 - isPermutation") {
+            context("when loaded", {
+                it("should implemenet solution", closure: {
+                    expect(sut.isPermutation([1])).toNot(beNil())
+                })
+            })
+            
+            context("when determining if input is permutation", { 
+                it("shoudl work for small predictable input", closure: {
+                    let input1 = [4, 1, 3, 2]
+                    expect(sut.isPermutation(input1)).to(equal(1))
+                    
+                    let input2 = [4, 1, 3]
+                    expect(sut.isPermutation(input2)).to(equal(0))
+                })
+                
+                it("shoudl work for small unpredictable input", closure: {
+                    let input1 = [4]
+                    expect(sut.isPermutation(input1)).to(equal(0))
+                    
+                    let input2 = [1]
+                    expect(sut.isPermutation(input2)).to(equal(1))
+                })
+                
+                it("shoudl work for small unpredictable input", closure: {
+                    let input1 = [4]
+                    expect(sut.isPermutation(input1)).to(equal(0))
+                    
+                    let input2 = [1]
+                    expect(sut.isPermutation(input2)).to(equal(1))
+                    
+                    let input3 = [1, 2, 3, 4, 5, 5]
+                    expect(sut.isPermutation(input3)).to(equal(0))
+                    
+                    let input4 = [1, 1]
+                    expect(sut.isPermutation(input4)).to(equal(0))
                 })
             })
         }

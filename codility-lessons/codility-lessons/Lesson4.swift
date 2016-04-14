@@ -33,4 +33,19 @@ public class Lesson4 {
         
         return -1
     }
+    
+    public func isPermutation(A : [Int]) -> Int {
+        let sortedInput = A.sort()
+        var iterator = 1
+        
+        return sortedInput.reduce(1, combine: { (result, item) -> Int in
+            if item == iterator {
+                iterator += 1
+                return result * 1
+            } else {
+                iterator += 1
+                return 0
+            }
+        })
+    }
 }
