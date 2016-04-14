@@ -48,4 +48,27 @@ public class Lesson4 {
             }
         })
     }
+    
+    public func minimalMissingInt(A : [Int]) -> Int {
+        //inverse and set values as keys
+        var checker = [Int:Bool]()
+        for item in A {
+            checker[item] = true
+        }
+
+        //check first key that doesn't have a value
+        var index = 1
+        for _ in checker {
+            if checker[index] == nil {
+                return index
+            }
+            
+            index += 1
+        }
+        
+        //didn't find any, that means that input array is made of 
+        //values from 1 - checker.count
+        return checker.count + 1
+    }
+
 }

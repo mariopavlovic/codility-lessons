@@ -57,7 +57,7 @@ class Lesson4Specs: QuickSpec {
                     expect(sut.isPermutation(input2)).to(equal(0))
                 })
                 
-                it("shoudl work for small unpredictable input", closure: {
+                it("should work for small unpredictable input", closure: {
                     let input1 = [4]
                     expect(sut.isPermutation(input1)).to(equal(0))
                     
@@ -65,7 +65,7 @@ class Lesson4Specs: QuickSpec {
                     expect(sut.isPermutation(input2)).to(equal(1))
                 })
                 
-                it("shoudl work for small unpredictable input", closure: {
+                it("should work for small unpredictable input", closure: {
                     let input1 = [4]
                     expect(sut.isPermutation(input1)).to(equal(0))
                     
@@ -77,6 +77,40 @@ class Lesson4Specs: QuickSpec {
                     
                     let input4 = [1, 1]
                     expect(sut.isPermutation(input4)).to(equal(0))
+                })
+            })
+        }
+        
+        describe("Given lesson 4 - minimalMissingInt") {
+            context("when loaded", {
+                it("should implemenet solution", closure: {
+                    expect(sut.minimalMissingInt([1])).toNot(beNil())
+                })
+            })
+            
+            context("when finding minimal missing int", {
+                it("should work for small predictable input", closure: {
+                    let input = [1, 3, 6, 4, 1, 2]
+                    expect(sut.minimalMissingInt(input)).to(equal(5))
+                })
+                
+                it("should work for small unpredictable input", closure: {
+                    let input = [1, 2, 3, 4]
+                    expect(sut.minimalMissingInt(input)).to(equal(5))
+                    
+                    let input2 = [1]
+                    expect(sut.minimalMissingInt(input2)).to(equal(2))
+
+                    let input3 = [0]
+                    expect(sut.minimalMissingInt(input3)).to(equal(1))
+                    
+                    let input4 = [1, 1, 1, 1, 1, 1, 1]
+                    expect(sut.minimalMissingInt(input4)).to(equal(2))
+                })
+                
+                it("should work for large inputs", closure: {
+                    let input = Array(count: 10000, repeatedValue: 1)
+                    expect(sut.minimalMissingInt(input)).to(equal(2))
                 })
             })
         }
