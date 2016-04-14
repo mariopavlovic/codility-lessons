@@ -10,6 +10,9 @@
 		50A04EB3387CDAC74B3AF55A /* Pods_tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB6963E45E19D583042B70BE /* Pods_tests.framework */; };
 		A000A6881CBCF8D100BBB8DD /* Lesson2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A000A6871CBCF8D100BBB8DD /* Lesson2.swift */; };
 		A000A6891CBCF8D100BBB8DD /* Lesson2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A000A6871CBCF8D100BBB8DD /* Lesson2.swift */; };
+		A00C60771CBF9AB000E72FA8 /* Lesson4.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00C60761CBF9AB000E72FA8 /* Lesson4.swift */; };
+		A00C60781CBF9AB000E72FA8 /* Lesson4.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00C60761CBF9AB000E72FA8 /* Lesson4.swift */; };
+		A00C607A1CBF9AC500E72FA8 /* Lesson4Specs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00C60791CBF9AC500E72FA8 /* Lesson4Specs.swift */; };
 		A01B4CE61CBE364800931529 /* Lesson3.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B4CE51CBE364800931529 /* Lesson3.swift */; };
 		A01B4CE71CBE364800931529 /* Lesson3.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B4CE51CBE364800931529 /* Lesson3.swift */; };
 		A01B4CE91CBE368D00931529 /* Lesson3Specs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B4CE81CBE368D00931529 /* Lesson3Specs.swift */; };
@@ -33,6 +36,8 @@
 /* Begin PBXFileReference section */
 		5E951E87D1A3AB50CB495096 /* Pods-tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tests/Pods-tests.debug.xcconfig"; sourceTree = "<group>"; };
 		A000A6871CBCF8D100BBB8DD /* Lesson2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson2.swift; sourceTree = "<group>"; };
+		A00C60761CBF9AB000E72FA8 /* Lesson4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson4.swift; sourceTree = "<group>"; };
+		A00C60791CBF9AC500E72FA8 /* Lesson4Specs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson4Specs.swift; sourceTree = "<group>"; };
 		A01B4CE51CBE364800931529 /* Lesson3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson3.swift; sourceTree = "<group>"; };
 		A01B4CE81CBE368D00931529 /* Lesson3Specs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson3Specs.swift; sourceTree = "<group>"; };
 		A01C6B1A1CBBABE800586A11 /* codility-lessons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "codility-lessons.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +107,7 @@
 				A0DEF1DE1CBBCD6C0095D917 /* Lesson1.swift */,
 				A000A6871CBCF8D100BBB8DD /* Lesson2.swift */,
 				A01B4CE51CBE364800931529 /* Lesson3.swift */,
+				A00C60761CBF9AB000E72FA8 /* Lesson4.swift */,
 			);
 			path = "codility-lessons";
 			sourceTree = "<group>";
@@ -113,6 +119,7 @@
 				A0DEF1DC1CBBCD5B0095D917 /* Lesson1Specs.swift */,
 				A06D24D81CBCFC2700F85CF9 /* Lesson2Specs.swift */,
 				A01B4CE81CBE368D00931529 /* Lesson3Specs.swift */,
+				A00C60791CBF9AC500E72FA8 /* Lesson4Specs.swift */,
 			);
 			path = tests;
 			sourceTree = "<group>";
@@ -276,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A000A6881CBCF8D100BBB8DD /* Lesson2.swift in Sources */,
+				A00C60771CBF9AB000E72FA8 /* Lesson4.swift in Sources */,
 				A01C6B1E1CBBABE800586A11 /* AppDelegate.swift in Sources */,
 				A0DEF1DF1CBBCD6C0095D917 /* Lesson1.swift in Sources */,
 				A01B4CE61CBE364800931529 /* Lesson3.swift in Sources */,
@@ -289,9 +297,11 @@
 				A000A6891CBCF8D100BBB8DD /* Lesson2.swift in Sources */,
 				A01B4CE71CBE364800931529 /* Lesson3.swift in Sources */,
 				A01B4CE91CBE368D00931529 /* Lesson3Specs.swift in Sources */,
+				A00C607A1CBF9AC500E72FA8 /* Lesson4Specs.swift in Sources */,
 				A06D24D91CBCFC2700F85CF9 /* Lesson2Specs.swift in Sources */,
 				A0DEF1DD1CBBCD5B0095D917 /* Lesson1Specs.swift in Sources */,
 				A0DEF1E01CBBCD6C0095D917 /* Lesson1.swift in Sources */,
+				A00C60781CBF9AB000E72FA8 /* Lesson4.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

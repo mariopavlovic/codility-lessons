@@ -1,0 +1,44 @@
+import Quick
+import Nimble
+
+class Lesson4Specs: QuickSpec {
+    override func spec() {
+        var sut: Lesson4!
+        
+        beforeEach {
+            sut = Lesson4()
+        }
+        
+        describe("Given lesson 4 - SolutionA") {
+            context("when loaded", {
+                it("should implemenet solution", closure: {
+                    expect(sut.secondInWhichFrogCanCross(1, [1])).toNot(beNil())
+                })
+            })
+            
+            context("when frog jumps around", { 
+                it("should take 6 sec to satisfy Codility input", closure: { 
+                    let input = [1, 3, 1, 4, 2, 3, 5, 4]
+                    let result = sut.secondInWhichFrogCanCross(5, input)
+                    expect(result).to(equal(6))
+                })
+                
+                it("should return correct value for small inputs", closure: {
+                    let result = sut.secondInWhichFrogCanCross(2, [1, 2])
+                    expect(result).to(equal(1))
+                    
+                    let result2 = sut.secondInWhichFrogCanCross(1, [1])
+                    expect(result2).to(equal(0))
+                })
+                
+                it("should return -1 when it can't find a path", closure: { 
+                    let result = sut.secondInWhichFrogCanCross(5, [1, 2, 3, 4])
+                    expect(result).to(equal(-1))
+                    
+                    let result2 = sut.secondInWhichFrogCanCross(5, [1])
+                    expect(result2).to(equal(-1))
+                })
+            })
+        }
+    }
+}
