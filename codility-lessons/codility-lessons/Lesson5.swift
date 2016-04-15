@@ -32,4 +32,22 @@ public class Lesson5 {
         
         return numPassedCars
     }
+    
+    /*!
+     Returns number of dividable elements by K in [A, B] range
+     
+     - parameter A: range stat (inclusive)
+     - parameter B: range end (inclusive)
+     - parameter K: divider
+     
+     - returns: Number of dividiable elements
+     */
+    public func countDivisible(A: Int, _ B: Int, _ K: Int) -> Int {
+        //cover the edge case where A is 0
+        if A == 0 {
+            return (B - (B % K)) / K + 1
+        }
+        
+        return (B - (B % K)) / K - (A - 1) / K
+    }
 }
