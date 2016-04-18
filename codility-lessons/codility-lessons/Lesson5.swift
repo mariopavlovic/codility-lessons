@@ -33,6 +33,7 @@ public class Lesson5 {
         return numPassedCars
     }
     
+    
     /*!
      Returns number of dividable elements by K in [A, B] range
      
@@ -99,4 +100,41 @@ public class Lesson5 {
             default: return 0
         }
     }
+    
+    
+    /*!
+     Returns a start index of a minimal array slice. Minimal
+     is measured as a average value of slice elements
+     
+     - parameter A: input Int array
+     
+     - returns: start index of a slice
+     */
+    public func findStartOfMinimalSlice(A : [Int]) -> Int {
+        var minStart = -1
+        var minAvg = Float(Int.max)
+        
+        for index in 0 ..< A.count - 1 {
+            var numItems = 2
+            var sum = A[index] + A[index + 1]
+            while Float(sum) / Float(numItems) < minAvg {
+                minStart = index
+                minAvg = Float(sum) / Float(numItems)
+                
+                if (index + numItems < A.count ) {
+                    sum += A[index + numItems]
+                    numItems += 1
+                } else {
+                    break
+                }
+            }
+        }
+        
+        return minStart
+    }
 }
+
+
+
+
+

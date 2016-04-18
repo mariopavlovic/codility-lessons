@@ -76,7 +76,7 @@ class Lesson5Specs: QuickSpec {
             })
         }
         
-        fdescribe("Given lesson 5 - minimalImpactFactors") {
+        describe("Given lesson 5 - minimalImpactFactors") {
             context("when loaded", {
                 it("should implemenet solution", closure: {
                     expect(sut.minimalImpactFactors("ACGT", [0], [0])).toNot(beNil())
@@ -116,6 +116,33 @@ class Lesson5Specs: QuickSpec {
                     
                     expect(diff).to(beLessThan(1))
                 })
+            })
+        }
+        
+        describe("Given lesson 5 - findStartOfMinimalSlice") {
+            context("when loaded", {
+                it("should implemenet solution", closure: {
+                    expect(sut.findStartOfMinimalSlice([0])).toNot(beNil())
+                })
+            })
+            
+            context("when calculating minimal average slice", {
+                it("should return correct value for small predictible input", closure: {
+                    let input = [4, 2, 2, 5, 1, 5, 8]
+                    expect(sut.findStartOfMinimalSlice(input)).to(equal(1))
+                })
+                
+                it("should return correct value for small unpredictible input", closure: {
+                    let input = [1, 1]
+                    expect(sut.findStartOfMinimalSlice(input)).to(equal(0))
+                    
+                    let input2 = [5, 5, 5, 5, 1, 1]
+                    expect(sut.findStartOfMinimalSlice(input2)).to(equal(4))
+
+                    let input3 = [-3, -5, -8, -4, -10]
+                    expect(sut.findStartOfMinimalSlice(input3)).to(equal(2))
+                })
+
             })
         }
     }
