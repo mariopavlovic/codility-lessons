@@ -50,4 +50,53 @@ public class Lesson5 {
         
         return (B - (B % K)) / K - (A - 1) / K
     }
+    
+    
+    /*!
+     Calculates minimal impact factor of nucleotides.
+     Impact factor:
+     A - 1
+     C - 2
+     G - 3
+     T - 4
+     
+     - parameter S: DNA sequence
+     - parameter P: analyzed nucleotides start index
+     - parameter Q: analyzed nucleotides end index
+     
+     - returns: Array of minimal impacts for start/end indexes
+     */
+    public func minimalImpactFactors(S : String, _ P : [Int], _ Q : [Int]) -> [Int] {
+        //sanitize
+        guard P.count == Q.count else {
+            return []
+        }
+        
+        //map
+        let impactFactors = S.characters.map { (nucleotid) -> Int in
+            return impactForNucleotid(nucleotid)
+        }
+        
+        //slice and find minimal
+        var result = Array(count: P.count, repeatedValue: 0)
+        for (index, start) in P.enumerate() {
+            let end = Q[index]
+            
+            if let minimal = impactFactors[start...end].minElement() {
+                result[index] = minimal
+            }
+        }
+        
+        return result
+    }
+    
+    func impactForNucleotid(nucleotid: Character) -> Int {
+        switch (nucleotid) {
+            case "A": return 1
+            case "C": return 2
+            case "G": return 3
+            case "T": return 4
+            default: return 0
+        }
+    }
 }

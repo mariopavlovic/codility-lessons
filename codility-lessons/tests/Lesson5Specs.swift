@@ -75,5 +75,48 @@ class Lesson5Specs: QuickSpec {
                 })
             })
         }
+        
+        fdescribe("Given lesson 5 - minimalImpactFactors") {
+            context("when loaded", {
+                it("should implemenet solution", closure: {
+                    expect(sut.minimalImpactFactors("ACGT", [0], [0])).toNot(beNil())
+                })
+            })
+            
+            context("when calculating minimal impact factor", {
+                it("should return correct value for small predictible input", closure: {
+                    let input = "CAGCCTA"
+                    let P = [2, 5, 0]
+                    let Q = [4, 5, 6]
+                    expect(sut.minimalImpactFactors(input, P, Q)).to(equal([2, 4, 1]))
+                })
+                
+                it("should return correct value for small unpredictible input", closure: { 
+                    let input = "A"
+                    let P = [0]
+                    let Q = [0]
+                    expect(sut.minimalImpactFactors(input, P, Q)).to(equal([1]))
+                    
+                    let input2 = "AA"
+                    let P2 = [0, 1]
+                    let Q2 = [0, 1]
+                    expect(sut.minimalImpactFactors(input2, P2, Q2)).to(equal([1, 1]))
+
+                })
+                
+                xit("should be fast", closure: {
+                    let testChr = Character("A")
+                    let input = String(count: 100000, repeatedValue: testChr)
+                    let P = Array(count: 50000, repeatedValue: 0)
+                    let Q = Array(count: 50000, repeatedValue: 99999)
+                    
+                    let start = NSDate.init(timeIntervalSinceNow: 0)
+                    sut.minimalImpactFactors(input, P, Q)
+                    let diff = NSDate.init(timeIntervalSinceNow: 0).timeIntervalSinceDate(start)
+                    
+                    expect(diff).to(beLessThan(1))
+                })
+            })
+        }
     }
 }
