@@ -47,4 +47,26 @@ public class Lesson6 {
     public func numDistinctValues(A : [Int]) -> Int {
         return Set(A).count
     }
+    
+    
+    
+    public func maxTripletValue(A : [Int]) -> Int {
+        guard A.count > 2 else {
+            return 0
+        }
+        
+        var sortedInput = A.sort()
+        let N = sortedInput.count
+        
+        //positive
+        let R = sortedInput[N - 1]
+        let Q = sortedInput[N - 2]
+        let P = sortedInput[N - 3]
+        
+        //negatives
+        let Rnegative = sortedInput[0]
+        let Qnegative = sortedInput[1]
+        
+        return max(P * Q * R, Rnegative * Qnegative * R)
+    }
 }

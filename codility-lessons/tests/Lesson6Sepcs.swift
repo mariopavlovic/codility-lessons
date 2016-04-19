@@ -55,5 +55,26 @@ class Lesson6Sepcs: QuickSpec {
                 })
             })
         }
+        
+        describe("Given lesson 6 - maxTripletValue") {
+            context("when loaded", {
+                it("should implemenet solution", closure: {
+                    expect(sut.maxTripletValue([1, 2, 3])).toNot(beNil())
+                })
+            })
+            
+            context("when looking for a max triplet value", {
+                it("should do it correctly for small predictable input", closure: {
+                    let input = [-3, 1, 2, -2, 5, 6]
+                    expect(sut.maxTripletValue(input)).to(equal(60))
+                })
+                
+                it("should do it correctly for small unpredictable input", closure: {
+                    let input = [-10, -10, 1, 2, 3, 4, 5]
+                    expect(sut.maxTripletValue(input)).to(equal(500))
+                })
+
+            })
+        }
     }
 }
