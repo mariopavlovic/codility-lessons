@@ -13,6 +13,9 @@
 		A00C60771CBF9AB000E72FA8 /* Lesson4.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00C60761CBF9AB000E72FA8 /* Lesson4.swift */; };
 		A00C60781CBF9AB000E72FA8 /* Lesson4.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00C60761CBF9AB000E72FA8 /* Lesson4.swift */; };
 		A00C607A1CBF9AC500E72FA8 /* Lesson4Specs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00C60791CBF9AC500E72FA8 /* Lesson4Specs.swift */; };
+		A01A0C961CC63374002B3B2F /* Lesson6.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01A0C951CC63374002B3B2F /* Lesson6.swift */; };
+		A01A0C971CC63374002B3B2F /* Lesson6.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01A0C951CC63374002B3B2F /* Lesson6.swift */; };
+		A01A0C991CC63381002B3B2F /* Lesson6Sepcs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01A0C981CC63381002B3B2F /* Lesson6Sepcs.swift */; };
 		A01B4CE61CBE364800931529 /* Lesson3.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B4CE51CBE364800931529 /* Lesson3.swift */; };
 		A01B4CE71CBE364800931529 /* Lesson3.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B4CE51CBE364800931529 /* Lesson3.swift */; };
 		A01B4CE91CBE368D00931529 /* Lesson3Specs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B4CE81CBE368D00931529 /* Lesson3Specs.swift */; };
@@ -41,6 +44,8 @@
 		A000A6871CBCF8D100BBB8DD /* Lesson2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson2.swift; sourceTree = "<group>"; };
 		A00C60761CBF9AB000E72FA8 /* Lesson4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson4.swift; sourceTree = "<group>"; };
 		A00C60791CBF9AC500E72FA8 /* Lesson4Specs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson4Specs.swift; sourceTree = "<group>"; };
+		A01A0C951CC63374002B3B2F /* Lesson6.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson6.swift; sourceTree = "<group>"; };
+		A01A0C981CC63381002B3B2F /* Lesson6Sepcs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson6Sepcs.swift; sourceTree = "<group>"; };
 		A01B4CE51CBE364800931529 /* Lesson3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson3.swift; sourceTree = "<group>"; };
 		A01B4CE81CBE368D00931529 /* Lesson3Specs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson3Specs.swift; sourceTree = "<group>"; };
 		A01C6B1A1CBBABE800586A11 /* codility-lessons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "codility-lessons.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +119,7 @@
 				A01B4CE51CBE364800931529 /* Lesson3.swift */,
 				A00C60761CBF9AB000E72FA8 /* Lesson4.swift */,
 				A0C897CC1CC0E86000E8B0A0 /* Lesson5.swift */,
+				A01A0C951CC63374002B3B2F /* Lesson6.swift */,
 			);
 			path = "codility-lessons";
 			sourceTree = "<group>";
@@ -127,6 +133,7 @@
 				A01B4CE81CBE368D00931529 /* Lesson3Specs.swift */,
 				A00C60791CBF9AC500E72FA8 /* Lesson4Specs.swift */,
 				A0C897CF1CC0E86E00E8B0A0 /* Lesson5Specs.swift */,
+				A01A0C981CC63381002B3B2F /* Lesson6Sepcs.swift */,
 			);
 			path = tests;
 			sourceTree = "<group>";
@@ -289,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A01A0C961CC63374002B3B2F /* Lesson6.swift in Sources */,
 				A000A6881CBCF8D100BBB8DD /* Lesson2.swift in Sources */,
 				A00C60771CBF9AB000E72FA8 /* Lesson4.swift in Sources */,
 				A01C6B1E1CBBABE800586A11 /* AppDelegate.swift in Sources */,
@@ -304,8 +312,10 @@
 			files = (
 				A0C897CE1CC0E86000E8B0A0 /* Lesson5.swift in Sources */,
 				A000A6891CBCF8D100BBB8DD /* Lesson2.swift in Sources */,
+				A01A0C971CC63374002B3B2F /* Lesson6.swift in Sources */,
 				A01B4CE71CBE364800931529 /* Lesson3.swift in Sources */,
 				A01B4CE91CBE368D00931529 /* Lesson3Specs.swift in Sources */,
+				A01A0C991CC63381002B3B2F /* Lesson6Sepcs.swift in Sources */,
 				A00C607A1CBF9AC500E72FA8 /* Lesson4Specs.swift in Sources */,
 				A06D24D91CBCFC2700F85CF9 /* Lesson2Specs.swift in Sources */,
 				A0C897D01CC0E86E00E8B0A0 /* Lesson5Specs.swift in Sources */,
