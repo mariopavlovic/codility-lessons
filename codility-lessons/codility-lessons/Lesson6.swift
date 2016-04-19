@@ -35,4 +35,16 @@ public class Lesson6 {
         
         return 0
     }
+    
+    
+    /*!
+     Counts distinct elements in array
+     
+     - parameter A: input array
+     
+     - returns: number of distinct values appearing in array A
+     */
+    public func numDistinctValues(A : [Int]) -> Int {
+        return Set(A).count
+    }
 }

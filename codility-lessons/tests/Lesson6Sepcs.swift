@@ -36,5 +36,24 @@ class Lesson6Sepcs: QuickSpec {
                 })
             })
         }
+        
+        describe("Given lesson 6 - numDistinctValues") {
+            context("when loaded", {
+                it("should implemenet solution", closure: {
+                    expect(sut.numDistinctValues([1, 2, 3])).toNot(beNil())
+                })
+            })
+            
+            context("when looking for a number of distinct values", {
+                it("should do it correctly for small predictable input", closure: {
+                    let input = [2, 1, 1, 2, 3, 1]
+                    expect(sut.numDistinctValues(input)).to(equal(3))
+                })
+                
+                it("should do it correctly for small unpredictable input", closure: {
+                    expect(sut.numDistinctValues([])).to(equal(0))
+                })
+            })
+        }
     }
 }
