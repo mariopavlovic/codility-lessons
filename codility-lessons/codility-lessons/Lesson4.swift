@@ -70,5 +70,25 @@ public class Lesson4 {
         //values from 1 - checker.count
         return checker.count + 1
     }
-
+    
+    
+    public func maxCounter(N : Int, _ A : [Int]) -> [Int] {
+        var counters = Array(count: N, repeatedValue: 0)
+        var maxValue = 0
+        
+        for index in A {
+            if index > N {
+                counters = Array(count: N, repeatedValue: maxValue)
+            } else {
+                counters[index - 1] += 1
+                
+                //update max value
+                if counters[index - 1] > maxValue {
+                    maxValue = counters[index - 1]
+                }
+            }
+        }
+        
+        return counters
+    }
 }
