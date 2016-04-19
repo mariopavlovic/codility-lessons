@@ -114,5 +114,32 @@ class Lesson4Specs: QuickSpec {
                 })
             })
         }
+        
+        describe("Given lesson 4 - maxCounter") {
+            context("when loaded", {
+                it("should implemenet solution", closure: {
+                    expect(sut.maxCounter(2, [1])).toNot(beNil())
+                })
+            })
+            
+            context("when running max counter", {
+                it("should work for small predictable input", closure: {
+                    let input = [3, 4, 4, 6, 1, 4, 4]
+                    expect(sut.maxCounter(5, input)).to(equal([3, 2, 2, 4, 2]))
+                })
+                
+                it("should work for small unpredictable input", closure: {
+                    let input = [3, 4, 4]
+                    expect(sut.maxCounter(5, input)).to(equal([0, 0, 1, 2, 0]))
+                    
+                    let input2 = [1]
+                    expect(sut.maxCounter(2, input2)).to(equal([1, 0]))
+                    
+                    let input3 = [4]
+                    expect(sut.maxCounter(2, input3)).to(equal([0, 0]))
+                })
+
+            })
+        }
     }
 }
