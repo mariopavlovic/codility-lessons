@@ -69,4 +69,43 @@ public class Lesson6 {
         
         return max(P * Q * R, Rnegative * Qnegative * R)
     }
+    
+    
+    /*!
+     Finds number of intersecting discs
+     
+     - parameter A: input containing radius of discs
+     
+     - returns: number of intersecting discs
+     */
+    public func numIntersectingDiscs(A : [Int]) -> Int {
+        guard A.count > 0 else {
+            return 0
+        }
+        
+        var discs = [Set<Int>]()
+        for (index, radius) in A.enumerate() {
+            let low = index - radius
+            let high = index + radius
+            
+            discs.append(Set((low...high).map{$0}))
+        }
+        
+        var counter = 0
+        for i in 0..<discs.count {
+            let disc = discs[i]
+            for j in i+1 ..< discs.count {
+                let next = discs[j]
+                if disc.intersect(next).count > 0 {
+                    counter += 1
+                }
+            }
+            
+            if counter > 10000000 {
+                return -1
+            }
+        }
+        
+        return counter
+    }
 }

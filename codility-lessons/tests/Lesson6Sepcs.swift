@@ -73,7 +73,21 @@ class Lesson6Sepcs: QuickSpec {
                     let input = [-10, -10, 1, 2, 3, 4, 5]
                     expect(sut.maxTripletValue(input)).to(equal(500))
                 })
-
+            })
+        }
+        
+        describe("Given lesson 6 - numIntersectingDiscs") {
+            context("when loaded", {
+                it("should implemenet solution", closure: {
+                    expect(sut.numIntersectingDiscs([1, 2, 3])).toNot(beNil())
+                })
+            })
+            
+            context("when detecting intersections", {
+                it("should do it correctly for small predictable input", closure: {
+                    let input = [1, 5, 2, 1, 4, 0]
+                    expect(sut.numIntersectingDiscs(input)).to(equal(11))
+                })
             })
         }
     }
