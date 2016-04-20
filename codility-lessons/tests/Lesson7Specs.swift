@@ -9,7 +9,7 @@ class Lesson7Specs: QuickSpec {
             sut = Lesson7()
         }
         
-        fdescribe("Given lesson 7 - numSurvivedFishes") {
+        describe("Given lesson 7 - numSurvivedFishes") {
             context("when loaded", {
                 it("should implemenet solution", closure: {
                     expect(sut.numSurvivedFishes([1, 2, 3], [0, 0, 0])).toNot(beNil())
@@ -54,7 +54,29 @@ class Lesson7Specs: QuickSpec {
                 })
 
             })
+        }
+        
+        fdescribe("Given lesson 7 - isProperlyNested") {
+            context("when loaded", {
+                it("should implemenet solution", closure: {
+                    expect(sut.isProperlyNested("")).toNot(beNil())
+                })
+            })
+            
+            context("when checkinf if string is properly nested", { 
+                it("should return correct results for small predictible input", closure: { 
+                    expect(sut.isProperlyNested("{[()()]}")).to(equal(1))
+                    expect(sut.isProperlyNested("{[()()]}{[()()]}")).to(equal(1))
+                    expect(sut.isProperlyNested("([)()]")).to(equal(0))
+                })
+                
+                it("should return correct results for small unpredictible input", closure: {
+                    expect(sut.isProperlyNested("")).to(equal(1))
+                    expect(sut.isProperlyNested("{")).to(equal(0))
+                    expect(sut.isProperlyNested("())")).to(equal(0))
+                })
 
+            })
         }
     }
 }

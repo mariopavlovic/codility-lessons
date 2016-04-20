@@ -50,4 +50,30 @@ public class Lesson7 {
         
         return count + downStreamFishes.count
     }
+    
+    
+    public func isProperlyNested(S : String) -> Int {
+        var stack = [Character]()
+        for char in S.characters {
+            if let left = stack.last where isContrapart(left, right: char) {
+                stack.popLast()
+            } else {
+                stack.append(char)
+            }
+        }
+        
+        return stack.count > 0 ? 0 : 1
+    }
+    
+    func isContrapart(left: Character, right: Character) -> Bool {
+        if left == "(" && right == ")" {
+            return true
+        } else if left == "[" && right == "]" {
+            return true
+        } else if left == "{" && right == "}" {
+            return true
+        } else {
+            return false
+        }
+    }
 }
