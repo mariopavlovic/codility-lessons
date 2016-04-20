@@ -56,7 +56,7 @@ class Lesson7Specs: QuickSpec {
             })
         }
         
-        fdescribe("Given lesson 7 - isProperlyNested") {
+        describe("Given lesson 7 - isProperlyNested") {
             context("when loaded", {
                 it("should implemenet solution", closure: {
                     expect(sut.isProperlyNested("")).toNot(beNil())
@@ -77,6 +77,22 @@ class Lesson7Specs: QuickSpec {
                 })
 
             })
+        }
+        
+        describe("Given lesson 7 - minimalNumberOfBlocks") {
+            context("when loaded", {
+                it("should implemenet solution", closure: {
+                    expect(sut.minimalNumberOfBlocks([0])).toNot(beNil())
+                })
+            })
+            
+            context("when calculating minimal number of blocks", {
+                it("should return correct result for small predictible input", closure: {
+                    let input = [8, 8, 5, 7, 9, 8, 7, 4, 8]
+                    expect(sut.minimalNumberOfBlocks(input)).to(equal(7))
+                })
+            })
+
         }
     }
 }

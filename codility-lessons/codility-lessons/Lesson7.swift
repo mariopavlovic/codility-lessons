@@ -76,4 +76,47 @@ public class Lesson7 {
             return false
         }
     }
+    
+    
+    public func minimalNumberOfBlocks(H : [Int]) -> Int {
+        //if only one block left then we need one block to fill it
+        guard H.count > 1 else {
+            return H.count
+        }
+        
+        //get the minimal value
+        guard let min = H.minElement() where min > 0 else {
+            return 0
+        }
+        
+        //cut the walls so that we add a new block
+        //on top of the minimal value
+        var remainingWalls = [[Int]]()
+        var tempWall = [Int]()
+        
+        for height in H {
+            if height == min {
+                if tempWall.count > 0 {
+                    remainingWalls.append(tempWall)
+                    tempWall = [Int]()
+                }
+            } else {
+                tempWall.append(height)
+            }
+        }
+        
+        //append last batch (if left)
+        if tempWall.count > 0 {
+            remainingWalls.append(tempWall)
+        }
+        
+        //one block added, now lets iterate through 
+        //rest of the blocks and user the same algorithm
+        var score = 0
+        for rest in remainingWalls {
+            score += minimalNumberOfBlocks(rest)
+        }
+        
+        return score + 1
+    }
 }
