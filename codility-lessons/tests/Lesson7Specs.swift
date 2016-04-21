@@ -94,5 +94,24 @@ class Lesson7Specs: QuickSpec {
             })
 
         }
+        
+        describe("Given lesson 7 - isProperlyNested2") {
+            context("when loaded", {
+                it("should implemenet solution", closure: {
+                    expect(sut.isProperlyNested2("")).toNot(beNil())
+                })
+            })
+            
+            context("when checking if string is properly nested", {
+                it("should return correct result for small predictible input", closure: {
+                    expect(sut.isProperlyNested2("()")).to(equal(1))
+                    expect(sut.isProperlyNested2("())")).to(equal(0))
+                    expect(sut.isProperlyNested2("(()(())())")).to(equal(1))
+                    expect(sut.isProperlyNested2("")).to(equal(1))
+                })
+            })
+            
+        }
+
     }
 }

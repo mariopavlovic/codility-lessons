@@ -119,4 +119,9 @@ public class Lesson7 {
         
         return score + 1
     }
+    
+    
+    public func isProperlyNested2(S : String) -> Int {
+        return isProperlyNested(S)
+    }
 }
