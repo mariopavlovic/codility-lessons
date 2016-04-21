@@ -61,4 +61,13 @@ public class Lesson8 {
         
         return count > (A.count / 2)
     }
+    
+    
+    public func dominatorIndex(A: [Int]) -> Int {
+        guard let dominator = findLeader(A) else {
+            return -1
+        }
+        
+        return A.startIndex.distanceTo(A.indexOf(dominator)!)
+    }
 }
