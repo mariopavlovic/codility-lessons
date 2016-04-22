@@ -16,4 +16,24 @@ public class Lesson9 {
         
         return profit
     }
+    
+    public func findMaxSlice(A : [Int]) -> Int {
+        var last = 0
+        let summedInput = A.map { (input) -> Int in
+            last += input
+            
+            if last < 0 {
+                last = 0
+            }
+            
+            return last
+        }
+        
+        var max = summedInput.maxElement() ?? 0
+        if max == 0 {
+            max = A.maxElement() ?? 0
+        }
+        
+        return max
+    }
 }

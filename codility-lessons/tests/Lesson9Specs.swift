@@ -9,7 +9,7 @@ class Lesson9Specs: QuickSpec {
             sut = Lesson9()
         }
         
-        fdescribe("Given lesson 9 - maxProfit") {
+        describe("Given lesson 9 - maxProfit") {
             context("when loaded", {
                 it("should implemenet solution", closure: {
                     expect(sut.maxProfit([1, 2, 3])).toNot(beNil())
@@ -34,7 +34,28 @@ class Lesson9Specs: QuickSpec {
                 })
 
             })
+        }
+        
+        describe("Given lesson 9 - findMaxSlice") {
+            context("when calculating max slice", {
+                it("should find correct solution for small predictable input", closure: {
+                    let input = [3, 2, -6, 4, 0]
+                    expect(sut.findMaxSlice(input)).to(equal(5))
+                    
+                    let input2 = [3, -10, 2, 4, 8, -1, 4, -3, 6, -10, 2]
+                    expect(sut.findMaxSlice(input2)).to(equal(20))
 
+                })
+                
+                it("should find correct solution for small unpredictable input", closure: {
+                    let input = [3]
+                    expect(sut.findMaxSlice(input)).to(equal(3))
+                    
+                    let input2 = [-3, -2, -1]
+                    expect(sut.findMaxSlice(input2)).to(equal(-1))
+                })
+
+            })
         }
     }
 }
