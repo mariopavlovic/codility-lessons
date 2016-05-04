@@ -50,5 +50,29 @@ class Lesson10Specs: QuickSpec {
 
             })
         }
+        
+        fdescribe("Given lesson 10 - numPeakGroups") {
+            context("when loaded", {
+                it("should implemenet solution", closure: {
+                    expect(sut.numPeakGroups([1])).toNot(beNil())
+                })
+            })
+            
+            context("when counting number of peak groups", {
+                it("should calculate correctly for small predictable input", closure: {
+                    let input = [1, 2, 3, 4, 3, 4, 1, 2, 3, 4, 6, 2]
+                    expect(sut.numPeakGroups(input)).to(equal(3))
+                    
+                    expect(sut.numPeakGroups([1, 3, 1, 1, 1, 1])).to(equal(1))
+                })
+                
+                it("should calculate correctly for small unpredictable input", closure: {
+                    let input = [1, 3, 1]
+                    expect(sut.numPeakGroups(input)).to(equal(1))
+                    
+                })
+
+            })
+        }
     }
 }
