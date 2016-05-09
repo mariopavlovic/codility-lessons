@@ -23,6 +23,9 @@
 		A020D4171CE0961500A1117D /* Lesson11.swift in Sources */ = {isa = PBXBuildFile; fileRef = A020D4161CE0961500A1117D /* Lesson11.swift */; };
 		A020D4181CE0961500A1117D /* Lesson11.swift in Sources */ = {isa = PBXBuildFile; fileRef = A020D4161CE0961500A1117D /* Lesson11.swift */; };
 		A020D41A1CE0962500A1117D /* Lesson11Specs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A020D4191CE0962500A1117D /* Lesson11Specs.swift */; };
+		A020D41C1CE0AF7900A1117D /* Lesson12.swift in Sources */ = {isa = PBXBuildFile; fileRef = A020D41B1CE0AF7900A1117D /* Lesson12.swift */; };
+		A020D41D1CE0AF7900A1117D /* Lesson12.swift in Sources */ = {isa = PBXBuildFile; fileRef = A020D41B1CE0AF7900A1117D /* Lesson12.swift */; };
+		A020D41F1CE0AF8300A1117D /* Lesson12Specs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A020D41E1CE0AF8300A1117D /* Lesson12Specs.swift */; };
 		A05C45051CC7700100D47EEA /* Lesson7.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05C45041CC7700100D47EEA /* Lesson7.swift */; };
 		A05C45061CC7700100D47EEA /* Lesson7.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05C45041CC7700100D47EEA /* Lesson7.swift */; };
 		A05C45081CC7701000D47EEA /* Lesson7Specs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05C45071CC7701000D47EEA /* Lesson7Specs.swift */; };
@@ -70,6 +73,8 @@
 		A01C6B371CBBB88300586A11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A020D4161CE0961500A1117D /* Lesson11.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson11.swift; sourceTree = "<group>"; };
 		A020D4191CE0962500A1117D /* Lesson11Specs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson11Specs.swift; sourceTree = "<group>"; };
+		A020D41B1CE0AF7900A1117D /* Lesson12.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson12.swift; sourceTree = "<group>"; };
+		A020D41E1CE0AF8300A1117D /* Lesson12Specs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson12Specs.swift; sourceTree = "<group>"; };
 		A05C45041CC7700100D47EEA /* Lesson7.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson7.swift; sourceTree = "<group>"; };
 		A05C45071CC7701000D47EEA /* Lesson7Specs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson7Specs.swift; sourceTree = "<group>"; };
 		A06D24D81CBCFC2700F85CF9 /* Lesson2Specs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson2Specs.swift; sourceTree = "<group>"; };
@@ -150,6 +155,7 @@
 				A0DE14101CC8CF0B00FDCC0F /* Lesson9.swift */,
 				A0F542251CD9E79A001639AF /* Lesson10.swift */,
 				A020D4161CE0961500A1117D /* Lesson11.swift */,
+				A020D41B1CE0AF7900A1117D /* Lesson12.swift */,
 			);
 			path = "codility-lessons";
 			sourceTree = "<group>";
@@ -169,6 +175,7 @@
 				A0DE14131CC8CF1800FDCC0F /* Lesson9Specs.swift */,
 				A0F542281CD9E7AD001639AF /* Lesson10Specs.swift */,
 				A020D4191CE0962500A1117D /* Lesson11Specs.swift */,
+				A020D41E1CE0AF8300A1117D /* Lesson12Specs.swift */,
 			);
 			path = tests;
 			sourceTree = "<group>";
@@ -336,6 +343,7 @@
 				A01A0C961CC63374002B3B2F /* Lesson6.swift in Sources */,
 				A020D4171CE0961500A1117D /* Lesson11.swift in Sources */,
 				A000A6881CBCF8D100BBB8DD /* Lesson2.swift in Sources */,
+				A020D41C1CE0AF7900A1117D /* Lesson12.swift in Sources */,
 				A00C60771CBF9AB000E72FA8 /* Lesson4.swift in Sources */,
 				A05C45051CC7700100D47EEA /* Lesson7.swift in Sources */,
 				A0F542261CD9E79A001639AF /* Lesson10.swift in Sources */,
@@ -350,6 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A020D41D1CE0AF7900A1117D /* Lesson12.swift in Sources */,
 				A05C45061CC7700100D47EEA /* Lesson7.swift in Sources */,
 				A0C897CE1CC0E86000E8B0A0 /* Lesson5.swift in Sources */,
 				A05C45081CC7701000D47EEA /* Lesson7Specs.swift in Sources */,
@@ -360,6 +369,7 @@
 				A01B4CE71CBE364800931529 /* Lesson3.swift in Sources */,
 				A0DE14121CC8CF0B00FDCC0F /* Lesson9.swift in Sources */,
 				A0DE140D1CC8BC4A00FDCC0F /* Lesson8.swift in Sources */,
+				A020D41F1CE0AF8300A1117D /* Lesson12Specs.swift in Sources */,
 				A0F542271CD9E79A001639AF /* Lesson10.swift in Sources */,
 				A0DE140F1CC8BC6100FDCC0F /* Lesson8Specs.swift in Sources */,
 				A01B4CE91CBE368D00931529 /* Lesson3Specs.swift in Sources */,
