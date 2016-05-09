@@ -9,7 +9,7 @@ class Lesson11Specs: QuickSpec {
             sut = Lesson11()
         }
         
-        fdescribe("Given L11") {
+        describe("Given L11") {
             describe("when solving problem numSemiprimes", {
                 context("for small predictible input", { 
                     it("should calculate correctly", closure: { 
