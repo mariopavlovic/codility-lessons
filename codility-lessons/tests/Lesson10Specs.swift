@@ -51,7 +51,7 @@ class Lesson10Specs: QuickSpec {
             })
         }
         
-        fdescribe("Given lesson 10 - numPeakGroups") {
+        describe("Given lesson 10 - numPeakGroups") {
             context("when loaded", {
                 it("should implemenet solution", closure: {
                     expect(sut.numPeakGroups([1])).toNot(beNil())
@@ -73,6 +73,6 @@ class Lesson10Specs: QuickSpec {
                 })
 
             })
-        }
+        }        
     }
 }
