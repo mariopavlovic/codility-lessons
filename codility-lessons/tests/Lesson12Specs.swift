@@ -9,7 +9,7 @@ class Lesson12Specs: QuickSpec {
             sut = Lesson12()
         }
         
-        fdescribe("Given L12") {
+        describe("Given L12") {
             describe("when solving problem of number of chocolates eaten", {
                 context("for small predictable input", {
                     it("should calculate correctly", closure: {
