@@ -21,8 +21,20 @@ class Lesson15Specs: QuickSpec {
                     expect(sut.numAbsoluteDiscreteElements([])).to(equal(0))
                     expect(sut.numAbsoluteDiscreteElements([-1, 1])).to(equal(1))
                 })
-
             })
+            
+            describe("when counting distinct slices", {
+                it("should count correctly for small predictable input", closure: {
+                    let input = [3, 4, 5, 5, 2]
+                    expect(sut.numDistinctSlices(6, A: input)).to(equal(9))
+                })
+                
+                it("should count correctly for small unpredictable input", closure: {
+                    expect(sut.numDistinctSlices(6, A: [1, 2])).to(equal(3))
+                    expect(sut.numDistinctSlices(6, A: [1])).to(equal(1))
+                })
+            })
+
         }
     }
 }
