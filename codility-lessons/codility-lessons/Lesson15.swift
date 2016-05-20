@@ -11,6 +11,8 @@ extension Lesson15 {
     }
 }
 
+
+// MARK: - B CountDistinctSlices
 extension Lesson15 {
     public func numDistinctSlices(M: Int, A: [Int]) -> Int {
         var start = 0
@@ -44,6 +46,37 @@ extension Lesson15 {
                 end += 1
                 if end >= N {
                     resetMoves()
+                }
+            }
+        }
+        
+        return count
+    }
+}
+
+
+// MARK: - C CountTriangles
+extension Lesson15 {
+    public func countTriangles(A: [Int]) -> Int {
+        func isTriangle(a: Int, _ b: Int, _ c: Int) -> Bool {
+            return (a + b > c) && (a + c > b) && (b + c > a)
+        }
+        
+        let N = A.count
+        var count = 0
+        
+        for i in 0 ..< N {
+            let a = A[i]
+            
+            for j in i + 1 ..< N {
+                let b = A[j]
+                
+                for k in j + 1 ..< N {
+                    let c = A[k]
+                    
+                    if isTriangle(a, b, c) {
+                        count += 1
+                    }
                 }
             }
         }

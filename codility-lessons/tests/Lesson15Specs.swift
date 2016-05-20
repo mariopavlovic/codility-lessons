@@ -35,6 +35,12 @@ class Lesson15Specs: QuickSpec {
                 })
             })
 
+            describe("when counting triangles", {
+                it("should count correctly for small predictable input", closure: {
+                    let input = [10, 2, 5, 1, 8, 12]
+                    expect(sut.countTriangles(input)).to(equal(4))
+                })
+            })
         }
     }
 }
